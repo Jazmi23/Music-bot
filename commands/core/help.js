@@ -15,6 +15,6 @@ const Embed = new MessageEmbed()
 		{ name: 'Commands', value: '' },
 	);
 	.setTimestamp();
-	.setFooter({ text: 'Some footer text here', iconURL: 'https://imgur.com/ZokD85J' });
+	.setFooter({ text: 'Some footer text here', iconURL: 'https://imgur.com/ZokD85J'});
 
 channel.send({ embeds: [Embed] });
