@@ -6,20 +6,15 @@ module.exports = {
     showHelp: false,
     utilisation: '{prefix}help',
 
-    execute(client, message, args) {
-        const embed = new MessageEmbed();
+const Embed = new MessageEmbed()
+	.setColor('#0099ff');
+	.setAuthor({ name: 'BG MUSIC', iconURL: 'https://imgur.com/ZokD85J'});
+	.setDescription('Music is your own experience, your thoughts, your wisdom. If you don’t live it, it won’t come out of your horn.');
+	.setThumbnail('https://imgur.com/ZokD85J');
+	.addFields(
+		{ name: 'Commands', value: '' },
+	);
+	.setTimestamp();
+	.setFooter({ text: 'Some footer text here', iconURL: 'https://imgur.com/ZokD85J' });
 
-        embed.setColor('RED');
-        embed.setAuthor(client.user.username, client.user.displayAvatarURL({ size: 1024, dynamic: true }));
-
-        const commands = client.commands.filter(x => x.showHelp !== false);
-
-        embed.setDescription('This code comes from a GitHub project [ZerioDev/Music-bot](https://github.com/ZerioDev/Music-bot).\nThe use of this one is possible while keeping the credits for free.\nIf you want to remove the credits join the Discord support server.');
-        embed.addField(`Enabled - ${commands.size}`, commands.map(x => `\`${x.name}${x.aliases[0] ? ` (${x.aliases.map(y => y).join(', ')})\`` : '\`'}`).join(' | '));
-
-        embed.setTimestamp();
-        embed.setFooter('Music comes first - Made with heart by Zerio ❤️', message.author.avatarURL({ dynamic: true }));
-
-        message.channel.send({ embeds: [embed] });
-    },
-};
+channel.send({ embeds: [Embed] });
