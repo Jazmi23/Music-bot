@@ -10,10 +10,6 @@ const Embed = new MessageEmbed()
 	.setColor('#0099ff');
 	.setAuthor({ name: 'BG MUSIC', iconURL: 'https://imgur.com/ZokD85J'});
 	.setDescription('Music is your own experience, your thoughts, your wisdom. If you don’t live it, it won’t come out of your horn.');
-	.setThumbnail('https://imgur.com/ZokD85J');
-	.addFields(
-		{ name: 'Commands', value: '' },
-	);
 	.setTimestamp();
 	.setFooter({text: 'Some footer text here', iconURL: 'https://imgur.com/ZokD85J'});
 
